@@ -9,12 +9,14 @@ jobs:
     steps:
       - run: my_var="Hello World!"
       - run: echo $my_var
+         
   say-hello-in-python:
     runs-on: macos-26
     steps:
       - run: print("Hello world from python!")
         shell: python
-    needs: just-say-hello
+    needs: 
+      - just-say-hello
 
 
     
