@@ -5,7 +5,8 @@ on:
 
 jobs:
   just-say-hello:
-    runs-on: ubuntu-24.04
+    runs-on: macos-26
     steps:
-      - run: echo "Hello, Hello! from an inline bash script in a GitHub Action Workflow!"
+      - run: echo "Hello, Hello! from an inline bash script in a GitHub Action Workflow on Mac!"
+
     
