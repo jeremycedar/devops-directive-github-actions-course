@@ -7,10 +7,11 @@ jobs:
   just-say-hello:
     runs-on: macos-26
     steps:
-      - run: 
+      - name: Setting Variable
+        run: 
           my_var="Hello World!";
           echo $my_var
-         
+          
   say-hello-in-python:
     runs-on: macos-26
     steps:
