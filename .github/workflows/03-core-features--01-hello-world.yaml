@@ -1,7 +1,9 @@
 name: Hello World Series
 
 on:
-  workflow_dispatch:
+  push: 
+    branches: 
+      - "main"
 
 jobs:
   just-say-hello:
