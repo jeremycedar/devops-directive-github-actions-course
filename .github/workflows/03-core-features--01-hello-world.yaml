@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Setting Variable
         run: 
-          my_var="Hello World!";
+          my_var="Hello World! with CLI push";
           echo $my_var
           
   say-hello-in-python:
