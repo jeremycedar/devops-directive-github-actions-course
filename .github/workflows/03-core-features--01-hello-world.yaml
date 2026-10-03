@@ -9,6 +9,11 @@ jobs:
     steps:
       - run: echo "Hello, Hello! from an inline bash script in a GitHub Action Workflow on Mac!"
       - run: whoami
+  say-hello-in-python:
+    runs-on: macos-26
+    steps:
+      - run: print("Hello world from python!")
+        shell: python
 
 
     
