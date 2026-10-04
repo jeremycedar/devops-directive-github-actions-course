@@ -11,7 +11,7 @@ on:
       - "03-core-features/filters/*.txt"
 
 jobs:
-  just-say-hello:
+  job1:
     runs-on: macos-26
     steps:
       - name: Setting Variable
@@ -19,13 +19,13 @@ jobs:
           my_var="Hello World! with CLI pull origin my test branch";
           echo $my_var
           
-  say-hello-in-python:
+  job2:
     runs-on: macos-26
     steps:
       - run: print("Hello world from python!")
         shell: python
     needs: 
-      - just-say-hello
+      - job1
 
 
     
