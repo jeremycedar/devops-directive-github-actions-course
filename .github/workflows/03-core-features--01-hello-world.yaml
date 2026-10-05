@@ -10,12 +10,12 @@ jobs:
       - name: Setting Variable
         run: 
           my_var="Hello World! with CLI pull origin my test branch";
-          echo $my_var
+          echo $my_var >> $GITHUB_ENV
           
   job2:
     runs-on: macos-26
     steps:
-      - run: print("Hello world from python!")
+      - run: print(${my_var:-<UNSET>})
         shell: python
     needs: 
       - job1
