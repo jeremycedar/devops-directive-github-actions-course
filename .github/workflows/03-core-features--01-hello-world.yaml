@@ -15,7 +15,7 @@ jobs:
   job2:
     runs-on: macos-26
     steps:
-      - run: echo "${test_env:-<UNSET>}"
+      - run: echo "${test_env}"
     needs: 
       - job1
 
