@@ -1,13 +1,7 @@
 name: Hello World Series
 
 on:
-  pull_request: 
-    types: 
-      - opened
-      - synchronize
-      - reopened
-    paths: 
-      - "*"
+  push: 
 
 jobs:
   job1:
