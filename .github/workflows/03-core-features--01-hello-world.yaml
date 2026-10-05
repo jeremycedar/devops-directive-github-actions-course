@@ -5,7 +5,7 @@ on:
 
 jobs:
   job1:
-    runs-on: macos-26
+    runs-on: ubuntu-latest
     steps:
       - name: Setting Variable
         run: 
@@ -13,9 +13,9 @@ jobs:
           echo "test_env=${my_var}" >> "$GITHUB_ENV"
           
   job2:
-    runs-on: macos-26
+    runs-on: ubuntu-latest
     steps:
-      - run: echo $test_env
+      - run: echo "$test_env"
     needs: 
       - job1
 
