@@ -15,8 +15,7 @@ jobs:
   job2:
     runs-on: macos-26
     steps:
-      - run: print(${test_env:-<UNSET>})
-        shell: python
+      - run: echo "${test_env:-<UNSET>}"
     needs: 
       - job1
 
