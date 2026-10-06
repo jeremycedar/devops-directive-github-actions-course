@@ -7,7 +7,7 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     env:
-      test_env: test_env_scope_var
+      test_env: "This is the value of the job var"
     outputs: 
       my_env: ${{ steps.set_my_var.outputs.my_test }}
     steps:
