@@ -7,7 +7,7 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     outputs: 
-      my_env: ${{ steps.set_my_var.outputs.my_env }}
+      my_env: ${{ steps.set_my_var.outputs.my_test }}
     steps:
       - name: Setting Variable
         id: set_my_var
