@@ -14,7 +14,7 @@ jobs:
         run: 
           my_var="I set the var via interpolation, or whatever it's called.";
           echo "my_test=${my_var}" >> "$GITHUB_OUTPUT";
-          echo "${{ steps.set_my_var.outputs.my_env}}"
+          echo "${{ steps.set_my_var.outputs.my_test}}"
 
   job2:
     runs-on: ubuntu-latest
