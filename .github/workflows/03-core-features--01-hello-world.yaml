@@ -13,7 +13,7 @@ jobs:
         id: set_my_var
         run: 
           my_var="Hello World! with CLI pull origin my test branch";
-          echo "test_env=${my_var}" >> "$GITHUB_ENV";
+          echo "test_env=${my_var}" >> "$GITHUB_OUTPUT";
 
   job2:
     runs-on: ubuntu-latest
