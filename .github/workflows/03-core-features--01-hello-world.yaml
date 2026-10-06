@@ -7,13 +7,13 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     outputs: 
-      my_env: ${{ steps.set_my_var.outputs.my_var }}
+      my_env: ${{ steps.set_my_var.outputs.my_env }}
     steps:
       - name: Setting Variable
         id: set_my_var
         run: 
           my_var="Hello World! with CLI pull origin my test branch";
-          echo "my_env=${my_var}" >> "$GITHUB_OUTPUT";
+          echo "This is a test" >> "$GITHUB_OUTPUT";
 
   job2:
     runs-on: ubuntu-latest
