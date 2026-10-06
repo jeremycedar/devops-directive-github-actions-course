@@ -13,14 +13,15 @@ jobs:
         id: set_my_var
         run: 
           my_var="Hello World! with CLI pull origin my test branch";
-          echo "test_env=${my_var}" >> "$GITHUB_OUTPUT";
+          echo "my_var=${my_var}" >> "$GITHUB_OUTPUT";
 
   job2:
     runs-on: ubuntu-latest
-    steps:
-      - run: echo ${{ needs.job1.outputs.my_var }}
     needs: 
       - job1
+    steps:
+      - run: echo "${{ needs.job1.outputs.my_var }}""
+
 
 
     
