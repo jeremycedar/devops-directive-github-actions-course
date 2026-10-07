@@ -5,8 +5,15 @@ on:
   
 
 jobs:
-  
+
   job1:
+    strategy:
+      matrix:
+        include:
+          - branch: main
+            env_target: Prod
+          - branch: mytest
+            env_target: NonProd
     runs-on: ubuntu-latest
     env:
       test_env: "This is the value of the job var"
