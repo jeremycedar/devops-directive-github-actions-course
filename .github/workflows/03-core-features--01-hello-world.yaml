@@ -14,7 +14,6 @@ jobs:
             env_target: Prod
           - branch: mytest
             env_target: NonProd
-    if: github.ref_name == matrix.branch
     environment: ${{ matrix.env_target}}
     runs-on: ubuntu-latest
     env:
