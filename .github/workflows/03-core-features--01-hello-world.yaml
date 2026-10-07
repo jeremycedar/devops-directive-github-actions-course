@@ -9,6 +9,7 @@ jobs:
   
   job1:
     runs-on: ubuntu-latest
+    environment: Prod
     env:
       test_env: "This is the value of the job var"
     outputs: 
@@ -19,7 +20,7 @@ jobs:
         run: 
           my_var="I set the var via interpolation, or whatever it's called.";
           echo "my_test=${my_var}" >> "$GITHUB_OUTPUT";
-          echo $test_env
+          echo $test_env;
           echo ${{ vars.test_var}}
 
   job2:
