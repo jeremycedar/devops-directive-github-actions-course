@@ -14,6 +14,8 @@ jobs:
             env_target: Prod
           - branch: mytest
             env_target: NonProd
+    if: github.ref_name == matrix.branch
+    environment: ${{ matrix.env_target}}
     runs-on: ubuntu-latest
     env:
       test_env: "This is the value of the job var."
