@@ -21,7 +21,7 @@ jobs:
           my_var="I set the var via interpolation, or whatever it's called.";
           echo "my_test=${my_var}" >> "$GITHUB_OUTPUT";
           echo $test_env;
-          echo "${{ vars.test_var}} in Github variables, and ${{ secrets.test_secret}} 
+          echo "${{ vars.test_var}} in Github variables, and ${{ secrets.test_secret}}"
 
   job2:
     runs-on: ubuntu-latest
