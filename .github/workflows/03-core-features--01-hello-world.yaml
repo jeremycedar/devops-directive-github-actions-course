@@ -16,7 +16,7 @@ jobs:
             env_target: NonProd
     runs-on: ubuntu-latest
     env:
-      test_env: "This is the value of the job var"
+      test_env: "This is the value of the job var."
     outputs: 
       test_env: ${{ steps.set_my_var.outputs.my_test }}
     steps:
