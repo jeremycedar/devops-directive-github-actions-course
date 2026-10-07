@@ -1,9 +1,12 @@
 name: Hello World Series
 
+
 on:
   push: 
+  
 
 jobs:
+  
   job1:
     runs-on: ubuntu-latest
     env:
@@ -17,6 +20,7 @@ jobs:
           my_var="I set the var via interpolation, or whatever it's called.";
           echo "my_test=${my_var}" >> "$GITHUB_OUTPUT";
           echo $test_env
+          echo ${{ vars.test_var}}
 
   job2:
     runs-on: ubuntu-latest
